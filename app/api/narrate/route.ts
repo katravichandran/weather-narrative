@@ -29,13 +29,18 @@ export async function POST(req: Request) {
   );
   const weather = await weatherRes.json();
 
+  const tempF = Math.round(weather.main.temp);
+  const tempC = Math.round((tempF - 32) * 5 / 9);
+
   const summary = {
     location: name + ", " + country,
-    temp: Math.round(weather.main.temp),
+    tempF,
+    tempC,
+    humidity: weather.main.humidity,
+    wind: Math.round(weather.wind.speed),
     clouds: weather.clouds.all,
-    wind: weather.wind.speed,
-    pressure: weather.main.pressure,
   };
+
 
   // 3. Ask OpenAI for the narrative (Responses API)
   const openaiRes = await fetch("https://api.openai.com/v1/responses", {
