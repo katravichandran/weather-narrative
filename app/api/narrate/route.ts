@@ -89,11 +89,11 @@ export async function POST(req: Request) {
           role: "user",
           content:
             "Location: " + summary.location + "\n" +
-            "Temperature: " + summary.temp + "°F\n" +
+            "Temperature: " + summary.tempF + "°F (" + summary.tempC + "°C)\n" +
+            "Humidity: " + summary.humidity + "%\n" +
+            "Wind: " + summary.wind + " mph\n" +
             "Cloud cover: " + summary.clouds + "%\n" +
-            "Wind speed: " + summary.wind + " mph\n" +
-            "Pressure: " + summary.pressure + " hPa\n\n" +
-            "Precipitation: " + precipitation + "\n" +
+            "Precipitation: " + summary.precipitation + "\n" +
             "Daylight: " + (isDaylight ? "yes" : "no") + "\n\n" +
             "Explain why it looks and feels like this right now.",
         },
