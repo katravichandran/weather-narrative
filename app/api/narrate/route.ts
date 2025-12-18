@@ -78,14 +78,14 @@ export async function POST(req: Request) {
         },
         {
           role: "user",
-          content: `
-Location: ${summary.location}
-Temperature: ${summary.temp}°F
-Cloud cover: ${summary.clouds}%
-Wind speed: ${summary.wind} mph
-Pressure: ${summary.pressure} hPa
-Explain why it feels like this right now.
-          `,
+          content: 
+              "Location: " + summary.location + "\n" +
+              "Temperature: " + summary.temp + "°F\n" +
+              "Cloud cover: " + summary.clouds + "%\n" +
+              "Wind speed: " + summary.wind + " mph\n" +
+              "Pressure: " + summary.pressure + " hPa\n\n" +
+              "Explain why it looks and feels like this right now."
+          ,
         },
       ],
     }),
