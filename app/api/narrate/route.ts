@@ -94,6 +94,7 @@ export async function POST(req: Request) {
             "Wind speed: " + summary.wind + " mph\n" +
             "Pressure: " + summary.pressure + " hPa\n\n" +
             "Precipitation: " + precipitation + "\n" +
+            "Daylight: " + (isDaylight ? "yes" : "no") + "\n\n" +
             "Explain why it looks and feels like this right now.",
         },
       ],
