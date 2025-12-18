@@ -41,6 +41,9 @@ export async function POST(req: Request) {
     clouds: weather.clouds.all,
   };
 
+  const isDaylight =
+  weather.dt >= weather.sys.sunrise &&
+  weather.dt <= weather.sys.sunset;
 
   // 3. Ask OpenAI for the narrative (Responses API)
   const openaiRes = await fetch("https://api.openai.com/v1/responses", {
