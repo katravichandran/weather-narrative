@@ -42,7 +42,7 @@ export async function POST(req: Request) {
         {
           role: "system",
           content: `
-            "You write short, vivid explanations of how the weather looks and feels outside right now
+            You write short, vivid explanations of how the weather looks and feels outside right now
             for an intelligent, curious reader.
             
             Assume the reader understands basic Earth science.
@@ -74,7 +74,7 @@ export async function POST(req: Request) {
             – accurate, grounded, and written like a short observational, engaging essay
             
             The goal is to help the reader understand why this moment looks and feels the way it does,
-            and to notice the atmosphere differently afterward."
+            and to notice the atmosphere differently afterward.`
         },
         {
           role: "user",
