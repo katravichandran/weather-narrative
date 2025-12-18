@@ -77,14 +77,14 @@ export async function POST(req: Request) {
             and to notice the atmosphere differently afterward."},
         {
           role: "user",
-          content: "
+          content: `
             Location: ${summary.location}
             Temperature: ${summary.temp}°F
             Cloud cover: ${summary.clouds}%
             Wind speed: ${summary.wind} mph
             Pressure: ${summary.pressure} hPa
             Explain why it feels like this right now.
-          ",
+          `,
         },
       ],
     }),
