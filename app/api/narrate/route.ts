@@ -74,7 +74,8 @@ export async function POST(req: Request) {
             – accurate, grounded, and written like a short observational, engaging essay
             
             The goal is to help the reader understand why this moment looks and feels the way it does,
-            and to notice the atmosphere differently afterward."},
+            and to notice the atmosphere differently afterward."
+        },
         {
           role: "user",
           content: `
